@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+
+</head>
+
+<body>
+    {%for setor in setores%}
+    <div style="width: 100%; overflow: hidden; margin-top:12px;">
+        <h3 style = "font-size:30px">
+            {{setor.upper().replace("_", " ")}}
+        </h3>
+    
+        <div style="display: inline-block">
+            <iframe style="border-radius: 8px;" src="./templates/reports/completo_{{setor}}.html" frameborder="0" height="600"
+            width="700"></iframe>
+        </div>
+        <div style="display: inline-block; margin-left: 24px;">
+            <iframe style="border-radius: 8px;" src="./templates/dashboards/dash_setor_{{setor}}.html" height="600"
+            width="700"></iframe>
+        </div>
+    </div> 
+    {%endfor%}
+
+</body>
+
+</html>
