@@ -6,6 +6,8 @@ if __name__ == "__main__":
     def atualiza_site() -> None:
 
         setores_acoes = SetoresAcoes()
+        setores_acoes.get_tickers_online()
+        setores_acoes.get_historico_online()
 
         # Coleta de dados de períodos longos
         setores_acoes.generate_reports_5y()
